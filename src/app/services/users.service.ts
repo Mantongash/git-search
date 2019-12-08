@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { HttpClientModule, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class UsersService {
-
-  constructor() { }
+  constructor() {}
 }
