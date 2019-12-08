@@ -11,6 +11,19 @@ export class UsersService {
   private clientsecret = "862ea922db5c5eac4b17569951f74822fcc60054";
   constructor(private http: HttpClientModule) {
     console.log("Service is now ready");
-    this.username = "Mantongash"
+    this.username = "Mantongash";
+  }
+
+  getUserData() {
+    return this.http
+      .get(
+        "https://api.github.com/users/" +
+          this.username +
+          "?client_id=" +
+          this.clientid +
+          "&client_secret=" +
+          this.clientsecret
+      )
+      .map(res => res.json());
   }
 }
