@@ -6,7 +6,6 @@ import { map } from "rxjs/operators";
   providedIn: "root"
 })
 export class UsersService {
-  
   private username: string;
   private clientid = "Iv1.06204863a8f8ba72";
   private clientsecret = "862ea922db5c5eac4b17569951f74822fcc60054";
@@ -25,6 +24,19 @@ export class UsersService {
           "&client_secret=" +
           this.clientsecret
       )
-      .pipe(map(res => res ));
+      .pipe(map(res => res));
+  }
+
+  getUserRepos() {
+    return this.http
+      .get(
+        "https://api.github.com/users/" +
+          this.username +
+          "/repos?client_id=" +
+          this.clientid +
+          "&client_secret=" +
+          this.clientsecret
+      )
+      .pipe(map(res => res));
   }
 }
