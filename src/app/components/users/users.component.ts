@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import {UsersService} from "../../services/users.service";
+import { Component, OnInit } from "@angular/core";
+import { UsersService } from "../../services/users.service";
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: "app-users",
+  templateUrl: "./users.component.html",
+  styleUrls: ["./users.component.css"]
 })
 export class UsersComponent implements OnInit {
-  profile:any[];
+  profile: any[];
+  repos: any[];
 
-  constructor(private usersService:UsersService) { 
-    this.usersService.getUserData().subscribe(profile =>{
-      console.log(profile)
-      this.profile=profile;
-    })
+  constructor(private usersService: UsersService) {
+    this.usersService.getUserData().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    });
+    this.usersService.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
