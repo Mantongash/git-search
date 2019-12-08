@@ -39,4 +39,8 @@ export class UsersService {
       )
       .pipe(map(res => res));
   }
+
+  updateUser(username:string) {
+    this.username=username;
+  }
 }
