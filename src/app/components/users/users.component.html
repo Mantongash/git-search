@@ -7,7 +7,8 @@
           class="form-control"
           placeholder="Enter GitHub Username"
           [(ngModel)]="username"
-          (keyup) = "findUser()"
+          (keyup)="findUser()"
+          name="username"
         />
       </div>
     </form>
