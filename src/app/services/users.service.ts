@@ -6,8 +6,8 @@ import "rxjs/add/operator/map";
   providedIn: "root"
 })
 export class UsersService {
-  private username:string;
-  private clientid="";
-  private clientsecret=""
-  constructor(private http:HttpClientModule) {}
+  private username: string;
+  private clientid = "Iv1.06204863a8f8ba72";
+  private clientsecret = "862ea922db5c5eac4b17569951f74822fcc60054";
+  constructor(private http: HttpClientModule) {}
 }
