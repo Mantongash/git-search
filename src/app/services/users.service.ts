@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import "rxjs/add/operator/map";
+import { map } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -24,6 +24,6 @@ export class UsersService {
           "&client_secret=" +
           this.clientsecret
       )
-      .map(res => res.json());
+      .pipe(map(res => res ));
   }
 }
