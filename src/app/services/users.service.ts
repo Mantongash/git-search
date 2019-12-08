@@ -6,5 +6,8 @@ import "rxjs/add/operator/map";
   providedIn: "root"
 })
 export class UsersService {
+  private username:string;
+  private clientid="";
+  private clientsecret=""
   constructor(private http:HttpClientModule) {}
 }
