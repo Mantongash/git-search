@@ -6,5 +6,5 @@ import "rxjs/add/operator/map";
   providedIn: "root"
 })
 export class UsersService {
-  constructor() {}
+  constructor(private http:HttpClientModule) {}
 }
