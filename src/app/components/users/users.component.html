@@ -1,6 +1,12 @@
 <div *ngIf="profile">
   <div class="row">
-    
+    <div class="coulumn-md-4">
+      <div class="profile-pic">
+        <img src="{{profile.avatar_url}}" alt="Profic Image" class="img-fluid">
+        <h3>{{profile.login}}</h3>
+        <p *ngIf="profile.name">{{profile.name}}</p>
+      </div>
+    </div>
   </div>
 
 </div>
