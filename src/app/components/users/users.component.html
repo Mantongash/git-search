@@ -26,8 +26,12 @@
       <div class="repos" *ngFor="let repo of repos">
         <h3>
           <a href="{{ git_url }}" target="_blank"> {{ repo.name }}</a>
-          <span><i class="fas fa-star"></i>{{ repo.stargazers_count }}</span>
-          <span><i class="fas fa-code-branch"></i>{{ repo.forks }}</span>
+          <span class="badge badge-warning"
+            ><i class="fas fa-star"></i>{{ repo.stargazers_count }}</span
+          >
+          <span class="badge badge-danger"
+            ><i class="fas fa-code-branch"></i>{{ repo.forks }}</span
+          >
         </h3>
         <p *ngIf="repo.description">{{ repo.description }}</p>
       </div>
