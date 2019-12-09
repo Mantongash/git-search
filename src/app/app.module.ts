@@ -7,9 +7,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { UsersComponent } from "./components/users/users.component";
 import { UsersService } from "./services/users.service";
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent],
+  declarations: [AppComponent, UsersComponent, LandingComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [UsersService],
   bootstrap: [AppComponent]
