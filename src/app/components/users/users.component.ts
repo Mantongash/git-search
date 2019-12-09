@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { UsersService } from "../../services/users.service";
+import { Users } from "../../classes/users";
 
 @Component({
   selector: "app-users",
@@ -7,11 +8,13 @@ import { UsersService } from "../../services/users.service";
   styleUrls: ["./users.component.css"]
 })
 export class UsersComponent implements OnInit {
-  profile: any[];
+  profile: Users[];
   repos: any[];
   username: string;
 
-  constructor(private usersService: UsersService) {}
+  constructor(private usersService: UsersService) {
+    this.profile = new Users("","",0,0,0)
+  }
 
   findUser() {
     this.usersService.updateUser(this.username);
