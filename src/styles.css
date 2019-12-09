@@ -9,3 +9,8 @@ h1 {
 h1 span {
   font-weight: 700;
 }
+
+input[type="text"]{
+  font-family:"Gupter";
+  text-align: center;
+}
