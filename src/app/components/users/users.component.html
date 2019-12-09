@@ -1,18 +1,20 @@
 <div class="container">
-  <h1><i class="fab fa-searchengin logo"></i>GitHub <span>Lens</span></h1>
-  <div class="form">
-    <form action="">
-      <div class="form-group">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Enter GitHub Username"
-          [(ngModel)]="username"
-          (keyup)="findUser()"
-          name="username"
-        />
-      </div>
-    </form>
+  <div class="row">
+    <h1><i class="fab fa-searchengin logo"></i>GitHub <span>Lens</span></h1>
+    <div class="form">
+      <form action="">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter GitHub Username"
+            [(ngModel)]="username"
+            (keyup)="findUser()"
+            name="username"
+          />
+        </div>
+      </form>
+    </div>
     <p>
       Enter a GitHub username and let us look it up for you. It's as simple as
       that :)
