@@ -3,19 +3,21 @@
     <div class="col-md-4">
       <h1><i class="fab fa-searchengin logo"></i>GitHub <span>Lens</span></h1>
     </div>
-    <div class="form">
-      <form action="">
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter GitHub Username"
-            [(ngModel)]="username"
-            (keyup)="findUser()"
-            name="username"
-          />
-        </div>
-      </form>
+    <div class="col-md-8">
+      <div class="form">
+        <form action="">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter GitHub Username"
+              [(ngModel)]="username"
+              (keyup)="findUser()"
+              name="username"
+            />
+          </div>
+        </form>
+      </div>
     </div>
     <p>
       Enter a GitHub username and let us look it up for you. It's as simple as
