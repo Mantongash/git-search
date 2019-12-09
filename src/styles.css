@@ -14,3 +14,9 @@ input[type="text"]{
   font-family:"Gupter";
   text-align: center;
 }
+
+p{
+  text-align:center;
+  font-family: "Montserrat";
+  color:coral
+}
