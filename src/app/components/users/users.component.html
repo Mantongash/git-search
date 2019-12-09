@@ -25,15 +25,14 @@
             </p></small
           >
         </form>
-        
       </div>
     </div>
   </div>
-  <hr>
+  <hr />
   <div *ngIf="profile">
     <div class="row">
       <div class="coulumn-md-4">
-        <div class="profile-pic">
+        <div class="profile-pic" class="profile">
           <img
             src="{{ profile.avatar_url }}"
             alt="Profic Image"
@@ -54,18 +53,39 @@
         </div>
       </div>
       <div class="col-md-6">
-        <h2>REPOSITORIES</h2>
-        <div class="repos" *ngFor="let repo of repos">
+        <h2 class="repo_tittle">REPOSITORIES</h2>
+        <div myHighlight class="repos" *ngFor="let repo of repos">
           <h3>
-            <a href="{{ git_url }}" target="_blank"> {{ repo.name }}</a>
-            <span class="badge badge-warning"
-              ><i class="fas fa-star"></i>{{ repo.stargazers_count }}</span
-            >
-            <span class="badge badge-danger"
-              ><i class="fas fa-code-branch"></i>{{ repo.forks }}</span
-            >
+            <div class="flexed d-flex justify-content-between">
+              <!-- <div class="flex-right"> -->
+              <div>
+                <h4 class="repos">{{ repo.name }}</h4>
+                <small
+                  ><p class="date">
+                    Created on: {{ repo.created_at | date }}
+                  </p></small
+                >
+                <a
+                  href="{{ profile.html_url }}"
+                  target="_blank"
+                  class="btn-warning view_repo"
+                  >View Repo</a
+                >
+              </div>
+              <div>
+                <span class="badge badge-warning"
+                  ><i class="fas fa-star"></i>{{ repo.stargazers_count }}</span
+                >&nbsp;
+                <span class="badge badge-danger"
+                  ><i class="fas fa-code-branch"></i>{{ repo.forks }}</span
+                >
+              </div>
+            </div>
           </h3>
-          <p *ngIf="repo.description">{{ repo.description }}</p>
+          <p *ngIf="repo.description" class="description">
+            {{ repo.description }}
+          </p>
+          <hr />
         </div>
       </div>
     </div>

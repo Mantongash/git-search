@@ -7,8 +7,8 @@ import { map } from "rxjs/operators";
 })
 export class UsersService {
   private username: string;
-  private clientid = "Iv1.06204863a8f8ba72";
-  private clientsecret = "862ea922db5c5eac4b17569951f74822fcc60054";
+  private clientid = "9dc208c0a529c3eeac66";
+  private clientsecret = "5cd8fb0a1c1540a878ab8a06b3fd0e65b37e1d2b";
   constructor(private http: HttpClient) {
     console.log("Service is now ready");
     this.username = "Mantongash";
@@ -40,7 +40,7 @@ export class UsersService {
       .pipe(map(res => res));
   }
 
-  updateUser(username:string) {
-    this.username=username;
+  updateUser(username: string) {
+    this.username = username;
   }
 }

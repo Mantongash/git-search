@@ -8,8 +8,8 @@ import { Users } from "../../classes/users";
   styleUrls: ["./users.component.css"]
 })
 export class UsersComponent implements OnInit {
-  profile: any[];
-  repos: any[];
+  profile;
+  repos;
   username: string;
 
   constructor(private usersService: UsersService) {
