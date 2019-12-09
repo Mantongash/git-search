@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Gupter:400,700|Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Gupter:400,700|Montserrat&display=swap");
 h1 {
   font-family: "Gupter";
+  color: darkgreen;
+  font-weight: 400;
+  text-align: center;
+}
+h1 span {
+  font-weight: 700;
 }
