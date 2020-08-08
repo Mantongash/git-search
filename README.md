@@ -54,7 +54,7 @@ To fix a bug or enhance an existing feature, follow these steps:
 - Push to the branch (git push origin improve-feature)
 - Create a Pull Request
 
-##### Link to Live Site : [https://yomzsamora.github.io/Akan-Names/](https://yomzsamora.github.io/Akan-Names/)
+##### Link to Live Site : [mantongash.github.io/git-search/](mantongash.github.io/git-search/)
 
 ### License
 
